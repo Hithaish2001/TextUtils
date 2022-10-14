@@ -19,11 +19,11 @@ function App() {
   }
 
   return (
-    <>
+    <div className="h-full">
     <Navbar title='TextUtil.' />
     <Alert alert={alert}/>
     <TextForm heading='Enter your text here(or copy-paste is fine) to analyze' callshowAlert={showAlert}/>
-    </>
+    </div>
   );
 }
 
