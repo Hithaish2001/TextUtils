@@ -56,7 +56,7 @@ export default function TextForm(props) {
 
   
   return (
-    <div className="flex flex-col space-y-4 bg-white h-screen dark:bg-[#131417]">
+    <div className="flex flex-col space-y-4 bg-white  dark:bg-[#131417]">
       <h1 className="lable ml-32 mt-8 text-2xl font-medium text-black dark:text-white">{props.heading}</h1>
       <textarea  id="Tbox" rows="8" value={text} placeholder="  Enter text here" onChange={handleOnChange} className="txtarea text-black border-2 border-black w-4/5 ml-32 rounded bg-white dark:bg-[#39393c] dark:text-white"></textarea>
       <div className="btn flex space-x-3">
@@ -73,6 +73,7 @@ export default function TextForm(props) {
         <p className="font-medium ml-[5px]">It takes about <span className="text-[#D64933] font-bold italic text-lg">{0.008 * (text.split(" ").length-1)}</span> minutes to read this text</p>
         <h2 className="text-2xl font-medium">Preview</h2>
         <p className="font-medium ">{text}</p>
+        
       </div>
     </div>
   );

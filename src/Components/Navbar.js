@@ -37,7 +37,7 @@ export default function Navbar(props) {
               <Link to="/" >Home</Link>
             </li>
             <li className="p-2 rounded-md transition-all hover:bg-white hover:text-black ease duration-500 ">
-              <Link to="/about">About</Link>
+              <Link to="/About">About</Link>
             </li>
             {/* <li className="p-2 rounded-md transition-all hover:bg-white hover:text-black ease duration-500 ">
               <a href="/">Contact Us</a>

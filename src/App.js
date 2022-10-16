@@ -7,6 +7,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  Routes,
   Link
 } from "react-router-dom";
 
@@ -31,14 +32,11 @@ function App() {
       <Navbar title='TextUtil.' />
       <Alert alert={alert}/>
       <div className="">
-      <Switch>
-            <Route exact path="/">
-            <TextForm heading='Enter your text here(or copy-paste is fine) to analyze' callshowAlert={showAlert}/>
-            </Route>
-            <Route exact path="/about">
-              <About />
-            </Route>
-        </Switch>
+        <Routes>
+          <Route path="/About" element={<About/>}/>
+          <Route exact path="/" element={
+          <TextForm heading='Enter your text here(or copy-paste is fine) to analyze' callshowAlert={showAlert}/>} />
+        </Routes>
       </div>
     </Router>
     </>
