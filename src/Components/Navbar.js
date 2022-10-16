@@ -33,12 +33,12 @@ export default function Navbar(props) {
         <Link className="logo text-2xl font-medium px-12 py-2 text-black dark:text-white" to="/">{props.title}</Link>
         <div className="nav">
           <ul className="flex px-12 py-1 font-medium text-gray-700 dark:text-white">
-            <li className="p-2 rounded-md transition-all hover:bg-white hover:text-black ease duration-500 ">
+             <li className="p-2 rounded-md transition-all hover:bg-white hover:text-black ease duration-500 ">
               <Link to="/" >Home</Link>
-            </li>
-            <li className="p-2 rounded-md transition-all hover:bg-white hover:text-black ease duration-500 ">
+            </li> 
+             <li className="p-2 rounded-md transition-all hover:bg-white hover:text-black ease duration-500 ">
               <Link to="/About">About</Link>
-            </li>
+            </li> 
             {/* <li className="p-2 rounded-md transition-all hover:bg-white hover:text-black ease duration-500 ">
               <a href="/">Contact Us</a>
             </li> */}

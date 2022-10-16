@@ -2,8 +2,10 @@ import React from 'react'
 
 function Alert(props) {
   return (
-    props.alert && <div className='alertmsg bg-[#AFF9C9]'>
+    <div className='h-12'>
+      {props.alert && <div className='alertmsg bg-[#AFF9C9]'>
             <strong>{props.alert.type}</strong> : {props.alert.msg}
+    </div>}
     </div>
   )
 }

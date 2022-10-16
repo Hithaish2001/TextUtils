@@ -3,12 +3,10 @@ import TextForm from "./Components/TextForm";
 import React, { useState } from 'react'
 import Alert from "./Components/Alert";
 import About from "./Components/About";
-import {
+ import {
   BrowserRouter as Router,
-  Switch,
   Route,
-  Routes,
-  Link
+  Routes
 } from "react-router-dom";
 
 function App() {
@@ -34,8 +32,7 @@ function App() {
       <div className="">
         <Routes>
           <Route path="/About" element={<About/>}/>
-          <Route exact path="/" element={
-          <TextForm heading='Enter your text here(or copy-paste is fine) to analyze' callshowAlert={showAlert}/>} />
+          <Route path="/" element={<TextForm heading='Enter your text here(or copy-paste is fine) to analyze' callshowAlert={showAlert}/>}/>
         </Routes>
       </div>
     </Router>
