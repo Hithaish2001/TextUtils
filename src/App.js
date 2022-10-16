@@ -2,6 +2,13 @@ import Navbar from "./Components/Navbar";
 import TextForm from "./Components/TextForm";
 import React, { useState } from 'react'
 import Alert from "./Components/Alert";
+import About from "./Components/About";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 function App() {
 
@@ -19,11 +26,22 @@ function App() {
   }
 
   return (
-    <div className="h-full">
-    <Navbar title='TextUtil.' />
-    <Alert alert={alert}/>
-    <TextForm heading='Enter your text here(or copy-paste is fine) to analyze' callshowAlert={showAlert}/>
-    </div>
+    <>
+    <Router>
+      <Navbar title='TextUtil.' />
+      <Alert alert={alert}/>
+      <div className="">
+      <Switch>
+            <Route exact path="/">
+            <TextForm heading='Enter your text here(or copy-paste is fine) to analyze' callshowAlert={showAlert}/>
+            </Route>
+            <Route exact path="/about">
+              <About />
+            </Route>
+        </Switch>
+      </div>
+    </Router>
+    </>
   );
 }
 
