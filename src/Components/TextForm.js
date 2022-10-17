@@ -23,10 +23,7 @@ export default function TextForm(props) {
   }
 
   const copytext=()=>{
-    let text=document.getElementById('Tbox');
-    text.select();
-    navigator.clipboard.writeText(text.value);
-    document.getSelection().removeAllRanges();
+    navigator.clipboard.writeText(text);
     props.callshowAlert('Text has been copied','Success')
   }
 
@@ -79,7 +76,7 @@ export default function TextForm(props) {
       </div>
       <div className="otherinfo ml-32 space-y-2 text-black dark:text-white">
         <h1 className="text-3xl font-medium">Your text summary</h1>
-        <p className="font-medium ml-[5px]">Your text contains <span className="text-[#D64933] font-bold italic text-lg">{text.split(" ").filter((e)=>{return e.length!==0 }).length}</span> Words and <span className="text-[#D64933] font-bold italic text-lg">{text.length}</span> Characters</p>
+        <p className="font-medium ml-[5px]">Your text contains <span className="text-[#D64933] font-bold italic text-lg">{text.split(/\S+/).filter((e)=>{return e.length!==0 }).length}</span> Words and <span className="text-[#D64933] font-bold italic text-lg">{text.length}</span> Characters</p>
         <p className="font-medium ml-[5px]">It takes about <span className="text-[#D64933] font-bold italic text-lg">{0.008 * (text.split(" ").filter((e)=>{return e.length!==0 }).length)}</span> minutes to read this text</p>
         <h2 className="text-2xl font-medium">Preview</h2>
         <p className="font-medium ">{text.length>0?text:'Nothing to preview'}</p>
